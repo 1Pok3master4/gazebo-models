@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+    <model name = "my_robot">
+    <static>false</static>
+    <pose>0.0 0.0 0.0 0.0 0.0 0.0 </pose>
+
+        <link name = "base_footprint"/>
+        <!--Base-->
+        <link name = "base_link"> 
+            <inertial>
+                <pose>0 0 0.5 0 0 0</pose>
+                <inertia>
+                    <ixx>0.33</ixx>
+                    <iyy>0.33</iyy>
+                    <izz>0.50</izz>
+                    <ixy>0.00</ixy>
+                    <iyz>0.00</iyz>
+                    <izx>0.00</izx>
+                </inertia>
+                <mass>1.0</mass>
+            </inertial>
+
+            <collision name = "base_collision">
+                <pose>0 0 0.5 0 0 0</pose>
+                <geometry>
+                    <cylinder>
+                        <radius>1.0</radius>
+                        <length>1.0</length>
+                    </cylinder>
+                </geometry>
+            </collision>
+
+            <visual name = "base_visual">
+                <pose>0 0 0.5 0 0 0</pose>
+                <geometry>
+                    <cylinder>
+                        <radius>1.0</radius>
+                        <length>1.0</length>
+                    </cylinder>
+                </geometry>
+            </visual>
+        </link>
+
+        <link name = "right_leg">
+            <pose>1.0 0 0.1 0 -1.57 0</pose> 
+            <inertial>
+                <pose>0 0 2.5 0 0 0</pose>
+                <inertia>
+                    <ixx>0.33</ixx>
+                    <iyy>0.33</iyy>
+                    <izz>0.50</izz>
+                    <ixy>0.00</ixy>
+                    <iyz>0.00</iyz>
+                    <izx>0.00</izx>
+                </inertia>
+                <mass>1.0</mass>
+            </inertial>
+
+            <collision name = "right_leg_collision">
+                <pose>0 0 2.5 0 0 0</pose>
+                <geometry>
+                    <cylinder>
+                        <radius>0.1</radius>
+                        <length>5.0</length>
+                    </cylinder>
+                </geometry>
+            </collision> 
+
+            <visual name = "right_leg_visual">
+                <pose>0 0 2.5 0 0 0</pose>
+                <geometry>
+                    <cylinder>
+                        <radius>0.1</radius>
+                        <length>5.0</length>
+                    </cylinder>
+                </geometry>
+            </visual>
+        </link>
+        <!--Joint-->
+        <joint name = "right_leg_joint" type = "ball">
+            <pose>1 0 0 0.1 -1.57 0</pose>
+            <parent>base_link</parent>
+            <child>right_leg</child>
+            <axis>
+                <xyz>0 1 0</xyz>
+            </axis>
+            <axis2>
+                <xyz>0 0 1</xyz>
+            </axis2>
+        </joint>
+    </model>
+</sdf>

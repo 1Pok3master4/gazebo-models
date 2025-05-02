@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="zebra_crossing">
+    <static>true</static>
+    <link name="zebra_crossing_link">
+      <visual name="zebra_crossing_visual">
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>4 2</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://zebra_crossing/materials/scripts</uri>
+            <uri>model://zebra_crossing/materials/textures</uri>
+            <name>ZebraCrossing/White</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

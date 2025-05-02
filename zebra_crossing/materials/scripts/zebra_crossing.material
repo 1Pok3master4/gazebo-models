@@ -1,0 +1,13 @@
+material ZebraCrossing/White
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture zebra_crossing.png
+      }
+    }
+  }
+}

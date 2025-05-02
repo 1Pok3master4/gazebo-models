@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="road">
+    <static>true</static>
+    <link name="road_link">
+      <visual name="road_visual">
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>4 20</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://road/materials/scripts</uri>
+            <uri>model://road/materials/textures</uri>
+            <name>Road/BlackTar</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

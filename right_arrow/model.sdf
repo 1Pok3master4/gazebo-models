@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="left_arrow">
+    <static>true</static>  <!-- Keep the arrow fixed in place -->
+    
+    <!-- Position the arrow in front of the robot -->
+    <pose>1 0 0.5 1.57 0 4.71</pose>  <!-- Adjust as needed -->
+
+    <link name="arrow_link">
+      <!-- Visual Representation -->
+      <visual name="arrow_visual">
+        <geometry>
+          <mesh>
+            <uri>file:///home/mocha1410/.gazebo/models/right_arrow/meshes/left_arrow.stl</uri>
+            <scale>0.005 0.005 0.005</scale>  <!-- Adjust size -->
+          </mesh>
+        </geometry>
+      </visual>
+
+      <!-- Collision (optional) -->
+      <collision name="arrow_collision">
+        <geometry>
+          <mesh>
+            <uri>file:///home/mocha1410/.gazebo/models/right_arrow/meshes/left_arrow.stl</uri>
+            <scale>0.005 0.005 0.005</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>
+

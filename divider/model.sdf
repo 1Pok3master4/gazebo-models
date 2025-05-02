@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="divider">
+    <static>true</static>
+    <link name="divider_link">
+      <visual name="divider_visual">
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>4 2</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://divider/materials/scripts</uri>
+            <uri>model://divider/materials/textures</uri>
+            <name>Divider/White</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

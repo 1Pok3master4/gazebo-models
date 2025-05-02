@@ -1,0 +1,15 @@
+material Arrow/Texture
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture /home/mocha1410/.gazebo/models/left_arrow/materials/textures/arrow_texture.png
+                filtering aniso
+            }
+        }
+    }
+}
+

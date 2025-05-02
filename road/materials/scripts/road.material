@@ -1,0 +1,13 @@
+material Road/BlackTar
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture black_tar.png
+      }
+    }
+  }
+}
